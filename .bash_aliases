@@ -23,20 +23,10 @@ alias .='cd ..'
 alias ..='cd ../..'
 alias ...='cd ../../..'
 
-# Change directories and list contents
-alias cl="cd $1; ls -A"
-
 # Quickies
 alias c='clear'
 alias p='pwd'
 alias x='exit'
-
-# Colorize
-alias ls='ls --color=auto'
-alias dir='dir --color=auto'
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
 
 # List
 alias l='ls'

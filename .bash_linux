@@ -31,6 +31,13 @@ alias lsb='sudo nano /etc/lsb-release'
 alias fcs='sudo fc-cache -fv'
 alias fcl='sudo fc-cache -fv ~/.fonts'
 
+# Colorize
+alias ls='ls --color=auto'
+alias dir='dir --color=auto'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
 #--------------------------------------------------------------------------
 # ARCH LINUX SPECIFIC
 #--------------------------------------------------------------------------

@@ -4,6 +4,14 @@
 # This file gets included by .bashrc
 #
 
+# Change directories and list contents
+# Note: I had to do this in a function rather than just
+# an alias because on Mac it didn't work right.
+function cl() {
+    cd $1
+    ls -A
+}
+
 # -----------------------------------------------------------------------------
 
 # Remove .DS_Store files. Useful if you share drives with Mac.
