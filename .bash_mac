@@ -11,6 +11,25 @@
 
 
 #--------------------------------------------------------------------------
+# APPLICATION ALIASES
+#--------------------------------------------------------------------------
+
+alias brave="open -a Brave"
+alias chrome="open -a Chrome"
+alias safari="open -a Safari"
+alias firefox="open -a Firefox"
+alias bbedit="open -a BBEdit"
+alias vscode="open -a Visual\ Studio\ Code"
+
+
+#--------------------------------------------------------------------------
+# EXPORTS
+#--------------------------------------------------------------------------
+
+export CLICOLOR=1
+export LS_COLORS=GxFxCxDxBxegedabagaced
+
+#--------------------------------------------------------------------------
 # FUNCTIONS
 #--------------------------------------------------------------------------
 
