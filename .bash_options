@@ -1,0 +1,37 @@
+#
+# ~/.bash_options
+#
+# This file gets included by .bashrc
+#
+# To see current shell options settings type: shopt
+#
+# shopt -s option # sets an option
+# shopt -u option # unsets an option
+#
+# List of built-in options here:
+# https://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
+# 
+
+# Automatically apply cd when a directory name is entered
+shopt -s autocd
+
+# Autocorrects cd misspellings
+shopt -s cdspell
+
+# Save multi-line commands in history as single line
+shopt -s cmdhist
+
+# Included dot files in expansion
+shopt -s dotglob
+
+# Extended pattern matching
+shopt -s extglob
+
+# Append history rather than overwriting it
+shopt -s histappend
+
+# Update windows size on command
+shopt -s checkwinsize
+
+# Epand aliases
+shopt -s expand_aliases

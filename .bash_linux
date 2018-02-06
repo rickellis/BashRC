@@ -1,0 +1,74 @@
+#
+# ~/.bash_linux
+#
+# This file gets included by .bashrc
+#
+# I use Arch Linux and Mac OS so I store Linux-specific commands here.
+#
+
+# If we are on Mac OS we exit
+[[ "$(uname)" = "Darwin" ]] && return;
+
+
+#--------------------------------------------------------------------------
+# ALIASES
+#--------------------------------------------------------------------------
+
+# Open a file or URL with the system default application.
+# We suppress error messages so the terminal doesn't get polluted.
+alias open='xdg-open >/dev/null 2>&1'
+
+# Alias for Visual Studio Code
+alias vscode=/opt/visual-studio-code/code
+
+# Reload conky config file
+alias cfgconky="killall -SIGUSR1 conky"
+
+# Update /etc/lsb-release
+alias lsb='sudo nano /etc/lsb-release'
+
+#add new fonts
+alias fcs='sudo fc-cache -fv'
+alias fcl='sudo fc-cache -fv ~/.fonts'
+
+#--------------------------------------------------------------------------
+# ARCH LINUX SPECIFIC
+#--------------------------------------------------------------------------
+
+# So I don't have to type sudo
+alias pacman='sudo pacman'
+
+# Synchronize with repositories and then upgrade packages that are out of date.
+alias pacsyu='pacman -Syu'
+
+# Update the mirrorlist
+alias mirrors="sudo reflector --verbose --country 'United States' -l 20 -n 5 --sort rate --save /etc/pacman.d/mirrorlist"
+
+#--------------------------------------------------------------------------
+# FUNCTIONS
+#--------------------------------------------------------------------------
+
+# Kill and restart conky
+function reconky() {
+    pkill conky
+    conky
+}
+
+# Set Reminder.
+# Allows you to set a reminder via the terminal.
+# A dialog box will show when the timer ends.
+reminder() {
+    echo "How many minutes from now do you want the reminder?"
+    read _time
+    echo "What should the reminder message say?"
+    read _msg
+    echo "Reminder set! Make sure to leave terminal open."
+    sleep ${_time}m && zenity --info --text "$_msg" 2>/dev/null
+}
+
+#--------------------------------------------------------------------------
+# APPLICATIONS
+#--------------------------------------------------------------------------
+
+# Launch neofetch
+neofetch

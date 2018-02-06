@@ -1,0 +1,27 @@
+#
+# ~/.bash_linux
+#
+# This file gets included by .bashrc
+#
+# I use Arch Linux and Mac OS so I store Mac-specific commands here.
+#
+
+# If we are not on Mac OS we exit
+[[ "$(uname)" != "Darwin" ]] && return;
+
+
+#--------------------------------------------------------------------------
+# FUNCTIONS
+#--------------------------------------------------------------------------
+
+# Display hidden files
+function showhidden() {
+    defaults write com.apple.finder AppleShowAllFiles TRUE
+    killall Finder
+}
+
+# Hide hidden files
+function hidehidden() {
+    defaults write com.apple.finder AppleShowAllFiles FALSE
+    killall Finder
+}
