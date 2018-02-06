@@ -12,8 +12,13 @@
 # https://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
 # 
 
-# Automatically apply cd when a directory name is entered
-shopt -s autocd
+# Settings only supported in Bash 4 and above
+if [ "${BASH_VERSION:0:1}" -ge 4 ]; then
+
+    # Automatically apply cd when a directory name is entered
+    shopt -s autocd
+
+fi
 
 # Autocorrects cd misspellings
 shopt -s cdspell

@@ -14,7 +14,7 @@ alias root="cd /; ls"
 # Local folder shortcuts
 alias dsk="cd ~/Desktop; ls"
 alias dev="cd ~/Development; ls"
-alias dks="cd ~/Documents; ls"
+alias dcs="cd ~/Documents; ls"
 alias dwn="cd ~/Downloads; ls"
 alias drp="cd ~/Dropbox; ls"
 
