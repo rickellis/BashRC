@@ -19,7 +19,7 @@ alias chrome="open -a Chrome"
 alias safari="open -a Safari"
 alias firefox="open -a Firefox"
 alias bbedit="open -a BBEdit"
-alias vscode="open -a Visual\ Studio\ Code"
+alias vsc="open -a Visual\ Studio\ Code"
 
 
 #--------------------------------------------------------------------------
@@ -33,7 +33,7 @@ export LS_COLORS=GxFxCxDxBxegedabagaced
 # FUNCTIONS
 #--------------------------------------------------------------------------
 
-# Display hidden files
+# Show hidden files
 function showhidden() {
     defaults write com.apple.finder AppleShowAllFiles TRUE
     killall Finder
@@ -43,4 +43,10 @@ function showhidden() {
 function hidehidden() {
     defaults write com.apple.finder AppleShowAllFiles FALSE
     killall Finder
+}
+
+# Change directories and list contents
+function lc() {
+    cd $1
+    ls -A
 }

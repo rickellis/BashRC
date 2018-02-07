@@ -4,14 +4,6 @@
 # This file gets included by .bashrc
 #
 
-# Change directories and list contents
-# Note: I had to do this in a function rather than just
-# an alias because on Mac it didn't work right.
-function cl() {
-    cd $1
-    ls -A
-}
-
 # -----------------------------------------------------------------------------
 
 # Remove .DS_Store files. Useful if you share drives with Mac.
@@ -28,6 +20,7 @@ gitgo() {
     if [[ ! -d .git ]]; then
         echo "Not a git repository."
     else
+        echo "You are in ${PWD}"
         # Are there any changes that need to be committed?
         if git diff-index --quiet HEAD --; then
             echo "Repository is up to date."

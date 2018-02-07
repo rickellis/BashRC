@@ -55,6 +55,12 @@ alias mirrors="sudo reflector --verbose --country 'United States' -l 20 -n 5 --s
 # FUNCTIONS
 #--------------------------------------------------------------------------
 
+# Change directories and list contents
+function lc() {
+    cd $1
+    ls -A --color=auto
+}
+
 # Kill and restart conky
 function reconky() {
     pkill conky

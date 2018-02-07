@@ -4,7 +4,6 @@
 # This file gets included by .bashrc
 #
 
-
 # History ignore repeated commands, ignore duplicates
 export HISTCONTROL=ignoreboth:erasedups
 

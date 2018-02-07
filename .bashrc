@@ -2,11 +2,10 @@
 [[ $- != *i* ]] && return
 
 # Define file includes
-includes=(".bash_aliases" ".bash_exports" ".bash_functions" ".bash_linux" ".bash_options" ".bash_mac" ".bash_extras")
+bashincs=(".bash_aliases" ".bash_exports" ".bash_functions" ".bash_linux" ".bash_options" ".bash_mac" ".bash_extras")
 
 # Load the file includes if they exist
-for file in ${includes[@]}
-do
+for file in ${bashincs[@]}; do
 	[[ -f "$file" ]] && source "${file}";
 done
 unset file

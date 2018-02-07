@@ -7,19 +7,18 @@
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Local folder shortcuts
+alias dt="cd ~/Desktop; ls"
+alias ds="cd ~/Documents; ls"
+alias dn="cd ~/Downloads; ls"
+alias db="cd ~/Dropbox; ls"
+
 # Quickies
 alias c='clear'
 alias p='pwd'
 alias x='exit'
 alias h="cd ~/; ls"
 alias r="cd /; ls"
-
-# Local folder shortcuts
-alias dt="cd ~/Desktop; ls"
-alias dv="cd ~/Development; ls"
-alias ds="cd ~/Documents; ls"
-alias dn="cd ~/Downloads; ls"
-alias db="cd ~/Dropbox; ls"
 
 # Quickly jump to parent directores
 alias .='cd ..'
@@ -30,12 +29,8 @@ alias ...='cd ../../..'
 alias l='ls'
 alias la='ls -A'
 alias ll='ls -lA'
-
-# List only directories
-alias lsd="ls -lF"
-
-# Show only dotfiles
-alias l.="ls -A | egrep '^\.'"
+alias ld="ls -lF" # Only directories
+alias l.="ls -A | egrep '^\.'" # Only dotfiles
 
 # List the commands you use most often
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30'

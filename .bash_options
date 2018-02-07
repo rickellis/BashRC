@@ -12,7 +12,8 @@
 # https://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
 # 
 
-# Settings only supported in Bash 4 and above
+# Settings only supported in Bash 4 and above.
+# Max OS uses version 3 due to licensing issues 
 if [ "${BASH_VERSION:0:1}" -ge 4 ]; then
 
     # Automatically apply cd when a directory name is entered
