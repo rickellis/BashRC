@@ -3,7 +3,7 @@
 #
 # This file gets included by .bashrc
 #
-# I use Arch Linux and Mac OS so I store Mac-specific commands here.
+# Mac-specific commands go here.
 #
 
 # If we are not on Mac OS we exit
