@@ -6,10 +6,10 @@
 
 
 # History ignore repeated commands, ignore duplicates
-export HISTCONTROL=ignoreboth:erasedups 
+export HISTCONTROL=ignoreboth:erasedups
 
 # History ignore various commands
-export HISTIGNORE='&:c:ls:ll:la:l:cd:cl:exit:clear:history' 
+export HISTIGNORE="&:c:p:x:h:r:ls:ll:la:l:cd:cl:exit:clear:history*" 
 
 # Export editors
 export EDITOR="nano"

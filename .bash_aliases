@@ -7,26 +7,24 @@
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# Navigation shortcuts
-alias home="cd ~/; ls"
-alias root="cd /; ls"
+# Quickies
+alias c='clear'
+alias p='pwd'
+alias x='exit'
+alias h="cd ~/; ls"
+alias r="cd /; ls"
 
 # Local folder shortcuts
-alias dsk="cd ~/Desktop; ls"
-alias dev="cd ~/Development; ls"
-alias dcs="cd ~/Documents; ls"
-alias dwn="cd ~/Downloads; ls"
-alias drp="cd ~/Dropbox; ls"
+alias dt="cd ~/Desktop; ls"
+alias dv="cd ~/Development; ls"
+alias ds="cd ~/Documents; ls"
+alias dn="cd ~/Downloads; ls"
+alias db="cd ~/Dropbox; ls"
 
 # Quickly jump to parent directores
 alias .='cd ..'
 alias ..='cd ../..'
 alias ...='cd ../../..'
-
-# Quickies
-alias c='clear'
-alias p='pwd'
-alias x='exit'
 
 # List
 alias l='ls'

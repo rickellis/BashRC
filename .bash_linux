@@ -16,10 +16,10 @@
 
 # Open a file or URL with the system default application.
 # We suppress error messages so the terminal doesn't get polluted.
-alias open='xdg-open >/dev/null 2>&1'
+alias open="xdg-open >/dev/null 2>&1"
 
 # Alias for Visual Studio Code
-alias vscode=/opt/visual-studio-code/code
+alias vsc=/opt/visual-studio-code/code
 
 # Reload conky config file
 alias cfgconky="killall -SIGUSR1 conky"
@@ -46,7 +46,7 @@ alias fgrep='fgrep --color=auto'
 alias pacman='sudo pacman'
 
 # Synchronize with repositories and then upgrade packages that are out of date.
-alias pacsyu='pacman -Syu'
+alias psyu='pacman -Syu'
 
 # Update the mirrorlist
 alias mirrors="sudo reflector --verbose --country 'United States' -l 20 -n 5 --sort rate --save /etc/pacman.d/mirrorlist"
