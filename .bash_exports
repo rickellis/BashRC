@@ -8,7 +8,7 @@
 export HISTCONTROL=ignoreboth:erasedups
 
 # History ignore various commands
-export HISTIGNORE="&:c:p:x:h:r:ls:ll:la:l:cd:cl:exit:clear:history*" 
+export HISTIGNORE="&:c:p:x:h:r:.:..:...:cd*:lc*:cl*:ls*:ll:la:ld:l.:lab:dt:ds:dn:db:df:ps:exit:clear:history*:*--help:man *" 
 
 # Export editors
 export EDITOR="nano"

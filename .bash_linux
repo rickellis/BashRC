@@ -7,7 +7,7 @@
 #
 
 # If we are on Mac OS we exit
-[[ "$(uname)" = "Darwin" ]] && return;
+[[ "$(uname)" == "Darwin" ]] && return;
 
 
 #--------------------------------------------------------------------------
@@ -65,6 +65,14 @@ function lc() {
 function reconky() {
     pkill conky
     conky
+}
+
+# Empty trash
+function emptytrash() {
+    rm -rf ~/.local/share/Trash/expunged/*
+    rm -rf ~/.local/share/Trash/files/*
+    rm -rf ~/.local/share/Trash/info/*
+    echo "Trash has been emptied."
 }
 
 # Set Reminder.

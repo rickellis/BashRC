@@ -50,3 +50,9 @@ function lc() {
     cd $1
     ls -A
 }
+
+# Empty trash
+function emptytrash() {
+    rm -rf ~/.Trash/*
+    echo "Trash has been emptied."
+}
