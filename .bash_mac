@@ -47,7 +47,9 @@ function hidehidden() {
 
 # Change directories and list contents
 function lc() {
-    cd $1
+    if ! [[ -z "$1" ]]; then
+        cd $1
+    fi 
     ls -A
 }
 

@@ -57,14 +57,22 @@ alias mirrors="sudo reflector --verbose --country 'United States' -l 20 -n 5 --s
 
 # Change directories and list contents
 function lc() {
-    cd $1
+    if ! [[ -z "$1" ]]; then
+        cd $1
+    fi 
     ls -A --color=auto
+}
+
+# Calls my conkymatic.sh shell script, which automatically
+# generates Conky colors based on current wallpaper
+function conkymatic() {
+    $HOME/CodeLab/ConkyMatic/conkymatic.sh
 }
 
 # Kill and restart conky
 function reconky() {
     pkill conky
-    conky
+    conky 2>/dev/null
 }
 
 # Empty trash
