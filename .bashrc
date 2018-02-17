@@ -6,7 +6,7 @@ bashincs=(".bash_aliases" ".bash_exports" ".bash_functions" ".bash_linux" ".bash
 
 # Load the file includes if they exist
 for file in ${bashincs[@]}; do
-	[[ -f "$file" ]] && source "${file}";
+	[[ -f "/home/rickellis/${file}" ]] && source "/home/rickellis/${file}";
 done
 unset file
 

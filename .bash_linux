@@ -63,6 +63,11 @@ function lc() {
     ls -A --color=auto
 }
 
+# Wifi/VPN connection utility
+function wifivpn() {
+    $HOME/CodeLab/WifiVPN/wifivpn.sh
+}
+
 # Calls my conkymatic.sh shell script, which automatically
 # generates Conky colors based on current wallpaper
 function conkymatic() {
@@ -100,4 +105,4 @@ reminder() {
 #--------------------------------------------------------------------------
 
 # Launch neofetch
-neofetch
+# neofetch
