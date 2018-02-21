@@ -23,4 +23,6 @@ unset file
 #  \# - The command number of this command.
 #  \! - The history number of the current command
 #
-PS1='[\w]\$ '
+# PS1='[\w]\$ '
+
+PS1='\[\e[00;33m\][\[\e[0m\]\[\e[01;36m\]\w\[\e[0m\]\[\e[00;33m\]]\[\e[0m\]\[\e[01;36m\]\$\[\e[0m\] '
