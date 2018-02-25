@@ -7,7 +7,7 @@
 #
 
 # If we are on Mac OS we exit
-[[ "$(uname)" == "Darwin" ]] && return;
+[ "$(uname)" == "Darwin" ] && return;
 
 
 #--------------------------------------------------------------------------
@@ -46,7 +46,7 @@ alias fgrep='fgrep --color=auto'
 alias pacman='sudo pacman'
 
 # Synchronize with repositories and then upgrade packages that are out of date.
-alias psyu='pacman -Syu'
+# alias psyu='pacman -Syu'
 
 # Update the mirrorlist
 alias mirrors="sudo reflector --verbose --country 'United States' -l 20 -n 5 --sort rate --save /etc/pacman.d/mirrorlist"
@@ -62,6 +62,17 @@ function lc() {
     fi 
     ls -A --color=auto
 }
+
+# Backup dotfiles
+function syncdotfiles() {
+    $HOME/CodeLab/Utilities/sync-dotfiles.sh
+}
+
+# Sync bashrc files to git
+function syncbashfiles() {
+    $HOME/CodeLab/Utilities/sync-bashfiles.sh
+}
+
 
 # Wifi/VPN connection utility
 function wifivpn() {
@@ -105,4 +116,4 @@ reminder() {
 #--------------------------------------------------------------------------
 
 # Launch neofetch
-# neofetch
+neofetch

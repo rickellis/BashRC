@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 
 # Define file includes
-bashincs=(".bash_aliases" ".bash_exports" ".bash_functions" ".bash_linux" ".bash_options" ".bash_mac" ".bash_extras")
+bashincs=(".bash_aliases" ".bash_exports" ".bash_functions" ".bash_linux" ".bash_options" ".bash_mac")
 
 # Load the file includes if they exist
 for file in ${bashincs[@]}; do
