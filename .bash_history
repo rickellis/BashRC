@@ -1,39 +1,3 @@
-./test.sh 
-Shell-Scripts/
-./sheading.sh 
-git status
-git add colorpalette.sh 
-env | egrep -l XDG_DESKTOP_SESSION
-env | egrep -l DESKTOP_SESSION
-foo
-$DESKTOP_SESSION
-c\c
-./sheading.shc
-./sheading.sh
-./test.sh 
-./sheading.sh 
-Shell-Scripts/
-gitpush
-git add sheading.sh 
-git commit -m 'Some cleanup'
-git add colorpalette.sh 
-git add mufire.sh 
-git commit -m 'Added heading as optional dependency'
-ConkyMatic/
-git add conkymatic.sh 
-WifiVPN/
-git add wifivpn.sh 
-git commit -m 'Added improved heading function'
-BashRC/
-git status
-git add .bashrc 
-git commit -m 'Changed prompt'
-git push
-syncbashrc 
-syncbashrc 
-add sheading.sh 
-git commit -m 'Removed bold'
-git commit -m 'Updated dods'
 git add README.md 
 git commit -m 'Updated docs'
 ./arch
@@ -498,3 +462,39 @@ wifivpn
 Dotfiles/
 syncdotfiles 
 syncbashfiles 
+syncbashfiles 
+syncdotfiles 
+git clone https://github.com/rickellis/Utilities.git
+Utilities/
+git add .
+git commit -m 'First commit'
+git push
+l
+syncbashfiles 
+syncdotfiles 
+git clone https://github.com/rickellis/Utilities.git
+Utilities/
+git add .
+git commit -m 'First commit'
+git push
+l
+sudo pacman -Ss hyper
+sudo pacman -Qs hyper
+sudo pacman -Ss '^hyper'
+sudo pacman -Ss 'hyper$'
+sudo pacman -Qs '^hyper'
+sudo pacman -Qs '^ne'
+sudo pacman -Qs '^xfce'
+echo -e " Search for package name that begins with a keyword"
+echo
+echo -e "    ${yel}\$${r}   ${grn}pacman -Ss${r} ${yel}'^${r}${cyn}keyword${r}${yel}'${r}"
+sudo pacman -Qs xfce
+pcheat
+pcheat --help foo bart
+pcheat p foo bart
+pcheat poo
+pcheat 'foo'
+pcheat 
+pcheat foo bar
+pcheat 
+pcheat foo bar me bo

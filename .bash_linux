@@ -73,10 +73,14 @@ function syncbashfiles() {
     $HOME/CodeLab/Utilities/sync-bashfiles.sh
 }
 
-
 # Wifi/VPN connection utility
 function wifivpn() {
     $HOME/CodeLab/WifiVPN/wifivpn.sh
+}
+
+# Pacman Cheatsheet
+function pcheat() {
+    $HOME/CodeLab/Shell-Scripts/pcheat.sh $@
 }
 
 # Calls my conkymatic.sh shell script, which automatically
