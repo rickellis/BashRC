@@ -45,9 +45,6 @@ alias fgrep='fgrep --color=auto'
 # So I don't have to type sudo
 alias pacman='sudo pacman'
 
-# Synchronize with repositories and then upgrade packages that are out of date.
-# alias psyu='pacman -Syu'
-
 # Update the mirrorlist
 alias mirrors="sudo reflector --verbose --country 'United States' -l 20 -n 5 --sort rate --save /etc/pacman.d/mirrorlist"
 

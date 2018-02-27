@@ -7,7 +7,7 @@
 #
 
 # If we are not on Mac OS we exit
-[[ "$(uname)" != "Darwin" ]] && return;
+[ "$(uname)" != "Darwin" ] && return;
 
 
 #--------------------------------------------------------------------------
@@ -20,7 +20,6 @@ alias safari="open -a Safari"
 alias firefox="open -a Firefox"
 alias bbedit="open -a BBEdit"
 alias vsc="open -a Visual\ Studio\ Code"
-
 
 #--------------------------------------------------------------------------
 # EXPORTS
