@@ -86,7 +86,7 @@ function pcheat() {
 # Calls my conkymatic.sh shell script, which automatically
 # generates Conky colors based on current wallpaper
 function conkymatic() {
-    $HOME/CodeLab/ConkyMatic/conkymatic.sh
+    $HOME/CodeLab/ConkyMatic/conkymatic.sh $@
 }
 
 # Kill and restart conky
