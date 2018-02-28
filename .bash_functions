@@ -14,8 +14,20 @@ function rmdsstore() {
 
 # -----------------------------------------------------------------------------
 
+# DirtyBird
+function dirtybird() {
+    if [ -z "$1" ]; then
+        local path="$HOME/CodeLab"
+    else
+        local path="$@"
+    fi
+    $HOME/CodeLab/Shell-Scripts/dirtybird.sh "$path"
+}
+
+# -----------------------------------------------------------------------------
+
 # Adds, commits, and pushes to git with one command.
-gitgo() {
+function gitgo() {
     # Are we in a directory under source control?
     if [[ ! -d .git ]]; then
         echo "Not a git repository."
@@ -44,7 +56,7 @@ gitgo() {
 # -----------------------------------------------------------------------------
 
 # Auto-extract based on type
-extract() {
+function extract() {
   if [ -f $1 ] ; then
       case $1 in
           *.tar.bz2)   tar xvjf $1    ;;

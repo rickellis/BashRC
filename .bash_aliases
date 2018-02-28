@@ -18,8 +18,8 @@ alias lab="cd ~/CodeLab; ls"
 alias c='clear'
 alias p='pwd'
 alias x='exit'
-alias h="cd ~/; ls"
-alias r="cd /; ls"
+alias h="cd ~/"
+alias r="cd /"
 
 # Quickly jump to parent directores
 alias .='cd ..'
