@@ -4,9 +4,12 @@
 # Define file includes
 bashincs=(".bash_aliases" ".bash_exports" ".bash_functions" ".bash_linux" ".bash_options" ".bash_mac")
 
+# Location of bash includes
+bashdir="$HOME/CodeLab/BashRC"
+
 # Load the file includes if they exist
 for file in ${bashincs[@]}; do
-	[ -f $HOME/$file ] && source $HOME/$file;
+	[ -f $bashdir/$file ] && source $bashdir/$file;
 done
 unset file
 

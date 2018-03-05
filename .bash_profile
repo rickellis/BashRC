@@ -1,6 +1,2 @@
-#
-# ~/.bash_profile
-#
-
 # Load .bashrc file.
-[ -f ~/.bashrc ] && source ~/.bashrc
+[[ -f $HOME/.bashrc ]] && source $HOME/.bashrc

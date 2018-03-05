@@ -75,6 +75,11 @@ function wifivpn() {
     $HOME/CodeLab/WifiVPN/wifivpn.sh
 }
 
+# AURIC AUR Helper
+function auric() {
+    $HOME/CodeLab/AURIC/auric.sh $@
+}
+
 # Pacman Cheatsheet
 function pcheat() {
     $HOME/CodeLab/Shell-Scripts/pcheat.sh $@
