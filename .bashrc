@@ -2,14 +2,14 @@
 [[ $- != *i* ]] && return
 
 # Define file includes
-bashincs=(".bash_aliases" ".bash_exports" ".bash_functions" ".bash_linux" ".bash_options" ".bash_mac")
+BASHINCS=(".bash_aliases" ".bash_exports" ".bash_functions" ".bash_linux" ".bash_options" ".bash_mac")
 
-# Location of bash includes
-bashdir="$HOME/CodeLab/BashRC"
+# Location of base directory
+BASEDIR="$HOME/CodeLab"
 
 # Load the file includes if they exist
-for file in ${bashincs[@]}; do
-	[ -f $bashdir/$file ] && source $bashdir/$file;
+for file in ${BASHINCS[@]}; do
+	[ -f $BASEDIR/BashRC/$file ] && source $BASEDIR/BashRC/$file;
 done
 unset file
 

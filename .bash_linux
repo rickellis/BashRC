@@ -45,6 +45,9 @@ alias fgrep='fgrep --color=auto'
 # So I don't have to type sudo
 alias pacman='sudo pacman'
 
+# Update packages and relaunch Conky so the package indicated resets
+alias pacsyu='pacman -Syu; reconky'
+
 # Update the mirrorlist
 alias mirrors="sudo reflector --verbose --country 'United States' -l 20 -n 5 --sort rate --save /etc/pacman.d/mirrorlist"
 
@@ -62,33 +65,33 @@ function lc() {
 
 # Backup dotfiles
 function syncdotfiles() {
-    $HOME/CodeLab/Utilities/sync-dotfiles.sh
+    $BASEDIR/Utilities/sync-dotfiles.sh
 }
 
 # Sync bashrc files to git
 function syncbashfiles() {
-    $HOME/CodeLab/Utilities/sync-bashfiles.sh
+    $BASEDIR/Utilities/sync-bashfiles.sh
 }
 
 # Wifi/VPN connection utility
 function wifivpn() {
-    $HOME/CodeLab/WifiVPN/wifivpn.sh
+    $BASEDIR/WifiVPN/wifivpn.sh
 }
 
 # AURIC AUR Helper
 function auric() {
-    $HOME/CodeLab/AURIC/auric.sh $@
+    $BASEDIR/AURIC/auric.sh $@
 }
 
 # Pacman Cheatsheet
 function pcheat() {
-    $HOME/CodeLab/Shell-Scripts/pcheat.sh $@
+    $BASEDIR/Shell-Scripts/pcheat.sh $@
 }
 
 # Calls my conkymatic.sh shell script, which automatically
 # generates Conky colors based on current wallpaper
 function conkymatic() {
-    $HOME/CodeLab/ConkyMatic/conkymatic.sh $@
+    $BASEDIR/ConkyMatic/conkymatic.sh $@
 }
 
 # Kill and restart conky

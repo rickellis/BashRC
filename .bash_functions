@@ -17,11 +17,11 @@ function rmdsstore() {
 # DirtyBird
 function dirtybird() {
     if [ -z "$1" ]; then
-        local path="$HOME/CodeLab"
+        local path="$BASEDIR"
     else
         local path="$@"
     fi
-    $HOME/CodeLab/Shell-Scripts/dirtybird.sh "$path"
+    $BASEDIR/Shell-Scripts/dirtybird.sh "$path"
 }
 
 # -----------------------------------------------------------------------------
