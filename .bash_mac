@@ -9,6 +9,9 @@
 # If we are not on Mac OS we exit
 [ "$(uname)" != "Darwin" ] && return;
 
+# MySQL
+export PATH="/usr/local/mysql/bin:$PATH"
+
 
 #--------------------------------------------------------------------------
 # APPLICATION ALIASES
@@ -55,4 +58,36 @@ function lc() {
 function emptytrash() {
     rm -rf ~/.Trash/*
     echo "Trash has been emptied."
+}
+
+# Apache start
+function apachestart(){
+    sudo apachectl start
+    httpd -v
+}
+
+# Apache stop
+function apachestop(){
+    sudo apachectl stop
+}
+
+# Apache restart
+function apacherestart(){
+    sudo apachectl restart
+}
+
+# MySQL start
+function mysqlstart() {
+    sudo /usr/local/mysql/support-files/mysql.server start
+}
+
+# MySQL stop
+function mysqlstop() {
+    sudo /usr/local/mysql/support-files/mysql.server stop
+}
+
+# Create a spacer in the doc
+function mkdockspacer(){
+    defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
+    killall Dock
 }
