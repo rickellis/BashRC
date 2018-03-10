@@ -21,9 +21,6 @@ alias open="xdg-open >/dev/null 2>&1"
 # Alias for Visual Studio Code
 alias vsc=/opt/visual-studio-code/code
 
-# Reload conky config file
-alias cfgconky="killall -SIGUSR1 conky"
-
 # Update /etc/lsb-release
 alias lsb='sudo nano /etc/lsb-release'
 
@@ -106,6 +103,16 @@ function emptytrash() {
     rm -rf ~/.local/share/Trash/files/*
     rm -rf ~/.local/share/Trash/info/*
     echo "Trash has been emptied."
+}
+
+function vn() {
+    variety -n >/dev/null
+}
+function vp() {
+    variety -p >/dev/null
+}
+function vt() {
+    variety -t >/dev/null
 }
 
 # Set Reminder.
