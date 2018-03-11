@@ -11,15 +11,10 @@
 
 
 #--------------------------------------------------------------------------
-# ALIASES
-#--------------------------------------------------------------------------
 
 # Open a file or URL with the system default application.
 # We suppress error messages so the terminal doesn't get polluted.
 alias open="xdg-open >/dev/null 2>&1"
-
-# Alias for Visual Studio Code
-alias vsc=/opt/visual-studio-code/code
 
 # Update /etc/lsb-release
 alias lsb='sudo nano /etc/lsb-release'
@@ -35,10 +30,6 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-#--------------------------------------------------------------------------
-# ARCH LINUX SPECIFIC
-#--------------------------------------------------------------------------
-
 # So I don't have to type sudo
 alias pacman='sudo pacman'
 
@@ -49,7 +40,25 @@ alias pacsyu='pacman -Syu; reconky'
 alias mirrors="sudo reflector --verbose --country 'United States' -l 20 -n 5 --sort rate --save /etc/pacman.d/mirrorlist"
 
 #--------------------------------------------------------------------------
-# FUNCTIONS
+
+# Launch Visual Studio Code
+function vsc() {
+    nohup /opt/visual-studio-code/code >/dev/null 2>&1 &
+    disown
+}
+
+# Lunch Hyper
+function hyper() {
+    /usr/bin/hyper >/dev/null 2>&1 &
+    disown
+}
+
+# Lunch XFCE Terminal
+function terminal() {
+    xfce4-terminal >/dev/null 2>&1 &
+    disown
+}
+
 #--------------------------------------------------------------------------
 
 # Change directories and list contents
