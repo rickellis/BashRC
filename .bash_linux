@@ -141,15 +141,15 @@ function mysqlstatus() {
 # Variety transport control
 # Next
 function vn() {
-    variety -n >/dev/null
+    variety -n  >/dev/null 2>&1
 }
 # Previous
 function vp() {
-    variety -p >/dev/null
+    variety -p  >/dev/null 2>&1
 }
 # Send to trash
 function vx() {
-    variety -t >/dev/null
+    variety -t >/dev/null 2>&1
 }
 
 #--------------------------------------------------------------------------
