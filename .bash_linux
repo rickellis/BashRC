@@ -148,7 +148,7 @@ function vp() {
     variety -p >/dev/null
 }
 # Send to trash
-function vt() {
+function vx() {
     variety -t >/dev/null
 }
 
