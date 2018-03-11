@@ -24,6 +24,16 @@ function dirtybird() {
     $BASEDIR/Shell-Scripts/dirtybird.sh "$path"
 }
 
+# CleanBird
+function cleanbird() {
+    if [ -z "$1" ]; then
+        local path="$BASEDIR"
+    else
+        local path="$@"
+    fi
+    $BASEDIR/Shell-Scripts/cleanbird.sh "$path"
+}
+
 # -----------------------------------------------------------------------------
 
 # Apache start
