@@ -46,6 +46,8 @@ function togglehidden() {
     killall Finder
 }
 
+#--------------------------------------------------------------------------
+
 # Change directories and list contents
 function lc() {
     if ! [[ -z "$1" ]]; then
@@ -54,37 +56,29 @@ function lc() {
     ls -A
 }
 
+#--------------------------------------------------------------------------
+
 # Empty trash
 function emptytrash() {
     rm -rf ~/.Trash/*
     echo "Trash has been emptied."
 }
 
-# Apache start
-function apachestart(){
-    sudo apachectl start
-    httpd -v
-}
-
-# Apache stop
-function apachestop(){
-    sudo apachectl stop
-}
-
-# Apache restart
-function apacherestart(){
-    sudo apachectl restart
-}
+#--------------------------------------------------------------------------
 
 # MySQL start
 function mysqlstart() {
     sudo /usr/local/mysql/support-files/mysql.server start
 }
 
+#--------------------------------------------------------------------------
+
 # MySQL stop
 function mysqlstop() {
     sudo /usr/local/mysql/support-files/mysql.server stop
 }
+
+#--------------------------------------------------------------------------
 
 # Create a spacer in the doc
 function mkdockspacer(){

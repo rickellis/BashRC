@@ -26,6 +26,29 @@ function dirtybird() {
 
 # -----------------------------------------------------------------------------
 
+# Apache start
+function apachestart(){
+    sudo apachectl start
+    httpd -v
+}
+
+# Apache stop
+function apachestop(){
+    sudo apachectl stop
+}
+
+# Apache restart
+function apacherestart(){
+    sudo apachectl restart
+}
+
+# Apache restart
+function apachestatus(){
+    systemctl status httpd
+}
+
+# -----------------------------------------------------------------------------
+
 # Adds, commits, and pushes to git with one command.
 function gitgo() {
     # Are we in a directory under source control?

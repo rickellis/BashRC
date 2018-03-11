@@ -60,42 +60,57 @@ function lc() {
     ls -A --color=auto
 }
 
+#--------------------------------------------------------------------------
+
 # Backup dotfiles
 function syncdotfiles() {
     $BASEDIR/Utilities/sync-dotfiles.sh
 }
+
+#--------------------------------------------------------------------------
 
 # Sync bashrc files to git
 function syncbashfiles() {
     $BASEDIR/Utilities/sync-bashfiles.sh
 }
 
+#--------------------------------------------------------------------------
+
 # Wifi/VPN connection utility
 function wifivpn() {
     $BASEDIR/WifiVPN/wifivpn.sh
 }
+
+#--------------------------------------------------------------------------
 
 # AURIC AUR Helper
 function auric() {
     $BASEDIR/AURIC/auric.sh $@
 }
 
+#--------------------------------------------------------------------------
+
 # Pacman Cheatsheet
 function pcheat() {
     $BASEDIR/Shell-Scripts/pcheat.sh $@
 }
 
-# Calls my conkymatic.sh shell script, which automatically
-# generates Conky colors based on current wallpaper
+#--------------------------------------------------------------------------
+
+# ConkyMatic automatic conky color generator
 function conkymatic() {
     $BASEDIR/ConkyMatic/conkymatic.sh $@
 }
+
+#--------------------------------------------------------------------------
 
 # Kill and restart conky
 function reconky() {
     pkill conky
     conky 2>/dev/null
 }
+
+#--------------------------------------------------------------------------
 
 # Empty trash
 function emptytrash() {
@@ -105,15 +120,57 @@ function emptytrash() {
     echo "Trash has been emptied."
 }
 
+#--------------------------------------------------------------------------
+
+# MySQL start
+function mysqlstart() {
+    sudo systemctl start mysqld
+}
+
+# MySQL stop
+function mysqlstop() {
+    sudo systemctl stop mysqld
+}
+
+function mysqlstatus() {
+    systemctl status mysqld
+}
+
+#--------------------------------------------------------------------------
+
+# Variety transport control
+# Next
 function vn() {
     variety -n >/dev/null
 }
+# Previous
 function vp() {
     variety -p >/dev/null
 }
+# Send to trash
 function vt() {
     variety -t >/dev/null
 }
+
+#--------------------------------------------------------------------------
+
+# Session commands
+function session() {
+    CMD=$1          # first argument
+    CMD=${CMD,,}    # lowercase
+    CMD=${CMD//-/}  # remove dashes
+    CMD=${CMD// /}  # remove spaces
+
+    case "$CMD" in
+        l)  xfce4-session-logout --logout ;;
+        s)  xfce4-session-logout --suspend ;;
+        r)  xfce4-session-logout --reboot ;;
+        x)  xfce4-session-logout --fast ;;
+        *)  echo "COMMANDS: l=logout, s=suspend, r=reboot, x=shutdown" ;;
+    esac
+}
+
+#--------------------------------------------------------------------------
 
 # Set Reminder.
 # Allows you to set a reminder via the terminal.
