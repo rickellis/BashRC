@@ -147,6 +147,14 @@ function mysqlstatus() {
 
 #--------------------------------------------------------------------------
 
+# Set display resolution. When I plug in my external monitor it always
+# resets to the maximum resolution. This lets me quickly fix it
+function setres() {
+    xrandr --output DP1 --mode 2560x1440 --rate 60 --above eDP1
+}
+
+#--------------------------------------------------------------------------
+
 # Variety transport control
 # Next
 function vn() {
