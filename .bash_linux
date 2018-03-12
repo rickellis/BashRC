@@ -9,6 +9,10 @@
 # If we are on Mac OS we exit
 [ "$(uname)" == "Darwin" ] && return;
 
+#--------------------------------------------------------------------------
+
+# Launch neofetch
+neofetch
 
 #--------------------------------------------------------------------------
 
@@ -171,6 +175,19 @@ function vx() {
 
 #--------------------------------------------------------------------------
 
+# Enpass doesn't play nice with dark themes, so this tricks it into
+# using a light theme. This must be run after a theme change.
+function fixenpasstheme() {
+    current_theme=$(xfconf-query -c xsettings -p $xfce_desktop_prop_prefix/Net/ThemeName)
+    theme_path="${HOME}/.config/theme-override/share/themes"
+    theme_file="last-theme.txt"
+    last_theme=`cat ${theme_path}/${theme_file}`
+    mv "${theme_path}/${last_theme}" "${theme_path}/${current_theme}"
+    echo "$current_theme" > "${theme_path}/${theme_file}"
+}
+
+#--------------------------------------------------------------------------
+
 # Session commands
 function session() {
     CMD=$1          # first argument
@@ -200,10 +217,3 @@ reminder() {
     echo "Reminder set! Make sure to leave terminal open."
     sleep ${_time}m && zenity --info --text "$_msg" 2>/dev/null
 }
-
-#--------------------------------------------------------------------------
-# APPLICATIONS
-#--------------------------------------------------------------------------
-
-# Launch neofetch
-neofetch
