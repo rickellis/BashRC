@@ -182,8 +182,14 @@ function fixenpasstheme() {
     theme_path="${HOME}/.config/theme-override/share/themes"
     theme_file="last-theme.txt"
     last_theme=`cat ${theme_path}/${theme_file}`
-    mv "${theme_path}/${last_theme}" "${theme_path}/${current_theme}"
-    echo "$current_theme" > "${theme_path}/${theme_file}"
+
+    if [[ $current_theme == $last_theme ]]; then
+        echo "Theme is already up-to-date"
+    else
+        mv "${theme_path}/${last_theme}" "${theme_path}/${current_theme}"
+        echo "$current_theme" > "${theme_path}/${theme_file}"
+        echo "Renamed ${last_theme} to ${current_theme}"
+    fi
 }
 
 #--------------------------------------------------------------------------
