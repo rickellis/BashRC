@@ -151,10 +151,10 @@ function mysqlstatus() {
 
 #--------------------------------------------------------------------------
 
-# Set display resolution. When I plug in my external monitor it always
+# Set display resolution. When I plug in my external monitor it sometimes
 # resets to the maximum resolution. This lets me quickly fix it
 function setres() {
-    xrandr --output DP1 --mode 2560x1440 --rate 60 --above eDP1
+    xrandr --output DP1 --mode 2560x1440 --rate 60 --left-of eDP1
 }
 
 #--------------------------------------------------------------------------
@@ -209,10 +209,10 @@ function session() {
     CMD=${CMD// /}  # remove spaces
 
     case "$CMD" in
-        l)  xfce4-session-logout --logout ;;
-        s)  xfce4-session-logout --suspend ;;
-        r)  xfce4-session-logout --reboot ;;
-        x)  xfce4-session-logout --fast ;;
+        l)  xfce4-session-logout --logout >/dev/null 2>&1;;
+        s)  xfce4-session-logout --suspend >/dev/null 2>&1;;
+        r)  xfce4-session-logout --reboot >/dev/null 2>&1;;
+        x)  xfce4-session-logout --fast >/dev/null 2>&1;;
         *)  echo "COMMANDS: l=logout, s=suspend, r=reboot, x=shutdown" ;;
     esac
 }
@@ -224,9 +224,9 @@ function session() {
 # A dialog box will show when the timer ends.
 reminder() {
     echo "How many minutes from now do you want the reminder?"
-    read _time
+    read _TIME
     echo "What should the reminder message say?"
-    read _msg
-    echo "Reminder set! Make sure to leave terminal open."
-    sleep ${_time}m && zenity --info --text "$_msg" 2>/dev/null
+    read _MSG
+    echo "Reminder set!"
+    sleep ${_TIME}m && zenity --info --text "${_MSG}" 2>/dev/null
 }
