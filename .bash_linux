@@ -159,6 +159,13 @@ function setres() {
 
 #--------------------------------------------------------------------------
 
+# This is used only when I log straight into a terminal to increase font size
+function bigfont() {
+    setfont ter-v32b
+}
+
+#--------------------------------------------------------------------------
+
 # Variety transport control
 # Next
 function vn() {
