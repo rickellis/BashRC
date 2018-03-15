@@ -117,28 +117,17 @@ function reconky() {
 
 #--------------------------------------------------------------------------
 
-# Empty trash
-function emptytrash() {
-    rm -rf ~/.local/share/Trash/expunged/*
-    rm -rf ~/.local/share/Trash/files/*
-    rm -rf ~/.local/share/Trash/info/*
-    echo "Trash has been emptied."
+# Session commands
+function session() {
+    $BASEDIR/Utilities/session.sh $@
 }
 
 #--------------------------------------------------------------------------
 
-# MySQL start
-function mysqlstart() {
-    sudo systemctl start mysqld
-}
-
-# MySQL stop
-function mysqlstop() {
-    sudo systemctl stop mysqld
-}
-
-function mysqlstatus() {
-    systemctl status mysqld
+# Enpass doesn't play nice with dark themes, so this tricks it into
+# using a light theme. This must be run after a theme change.
+function enpasstheme() {
+    $BASEDIR/Utilities/update-enpass-theme.sh
 }
 
 #--------------------------------------------------------------------------
@@ -174,39 +163,28 @@ function vx() {
 
 #--------------------------------------------------------------------------
 
-# Enpass doesn't play nice with dark themes, so this tricks it into
-# using a light theme. This must be run after a theme change.
-function fixenpasstheme() {
-    current_theme=$(xfconf-query -c xsettings -p $xfce_desktop_prop_prefix/Net/ThemeName)
-    theme_path="${HOME}/.config/theme-override/share/themes"
-    theme_file="last-theme.txt"
-    last_theme=`cat ${theme_path}/${theme_file}`
-
-    if [[ $current_theme == $last_theme ]]; then
-        echo "Theme is already up-to-date"
-    else
-        mv "${theme_path}/${last_theme}" "${theme_path}/${current_theme}"
-        echo "$current_theme" > "${theme_path}/${theme_file}"
-        echo "Renamed ${last_theme} to ${current_theme}"
-    fi
+# Empty trash
+function emptytrash() {
+    rm -rf ~/.local/share/Trash/expunged/*
+    rm -rf ~/.local/share/Trash/files/*
+    rm -rf ~/.local/share/Trash/info/*
+    echo "Trash has been emptied."
 }
 
 #--------------------------------------------------------------------------
 
-# Session commands
-function session() {
-    CMD=$1          # first argument
-    CMD=${CMD,,}    # lowercase
-    CMD=${CMD//-/}  # remove dashes
-    CMD=${CMD// /}  # remove spaces
+# MySQL start
+function mysqlstart() {
+    sudo systemctl start mysqld
+}
 
-    case "$CMD" in
-        l)  xfce4-session-logout --logout >/dev/null 2>&1;;
-        s)  xfce4-session-logout --suspend >/dev/null 2>&1;;
-        r)  xfce4-session-logout --reboot >/dev/null 2>&1;;
-        x)  xfce4-session-logout --fast >/dev/null 2>&1;;
-        *)  echo "COMMANDS: l=logout, s=suspend, r=reboot, x=shutdown" ;;
-    esac
+# MySQL stop
+function mysqlstop() {
+    sudo systemctl stop mysqld
+}
+
+function mysqlstatus() {
+    systemctl status mysqld
 }
 
 #--------------------------------------------------------------------------
