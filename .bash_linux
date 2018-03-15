@@ -228,5 +228,5 @@ reminder() {
     echo "What should the reminder message say?"
     read _MSG
     echo "Reminder set!"
-    sleep ${_TIME}m && zenity --info --text "${_MSG}" 2>/dev/null
+    sleep ${_TIME}m && zenity --info --text "${_MSG}" >/dev/null 2>&1
 }
