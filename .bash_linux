@@ -1,11 +1,3 @@
-#
-# ~/.bash_linux
-#
-# This file gets included by .bashrc
-#
-# Linux-specific commands here.
-#
-
 # If we are on Mac OS we exit
 [ "$(uname)" == "Darwin" ] && return;
 

@@ -1,11 +1,17 @@
+#     _             _           
+#    | |__  __ _ __| |_  _ _ __ 
+#   _| '_ \/ _` (_-< ' \| '_/ _|
+#  (_)_.__/\__,_/__/_||_|_| \__|
+#
+
 # If not running interactively exit
 [[ $- != *i* ]] && return
 
-# Define file includes
-BASHINCS=(".bash_aliases" ".bash_exports" ".bash_functions" ".bash_linux" ".bash_options" ".bash_mac")
-
 # Location of base directory
 BASEDIR="$HOME/CodeLab"
+
+# Define file includes
+BASHINCS=(".bash_aliases" ".bash_exports" ".bash_functions" ".bash_linux" ".bash_options" ".bash_mac")
 
 # Load the file includes if they exist
 for file in ${BASHINCS[@]}; do

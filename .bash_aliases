@@ -1,9 +1,3 @@
-#
-# ~/.bash_aliases
-#
-# This file gets included by .bashrc
-#
-
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 

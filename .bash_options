@@ -1,8 +1,3 @@
-#
-# ~/.bash_options
-#
-# This file gets included by .bashrc
-#
 # To see current shell options settings type: shopt
 #
 # shopt -s option # sets an option
@@ -13,12 +8,11 @@
 # 
 
 # Settings only supported in Bash 4 and above.
-# Max OS uses version 3 due to licensing issues 
+# Max OS uses version 3 due to licensing issues.
+# Use homebrew to install version 4
 if [ "${BASH_VERSION:0:1}" -ge 4 ]; then
-
     # Automatically apply cd when a directory name is entered
     shopt -s autocd
-
 fi
 
 # Autocorrects cd misspellings

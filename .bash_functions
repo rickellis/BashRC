@@ -1,9 +1,3 @@
-#
-# ~/.bash_functions
-#
-# This file gets included by .bashrc
-#
-
 # -----------------------------------------------------------------------------
 
 # Remove .DS_Store files. Useful if you share drives with Mac.
