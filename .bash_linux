@@ -132,10 +132,14 @@ function enpasstheme() {
 
 #--------------------------------------------------------------------------
 
-# Set display resolution. When I plug in my external monitor it sometimes
-# resets to the maximum resolution. This lets me quickly fix it
-function setres() {
-    xrandr --output DP1 --mode 2560x1440 --rate 60 --left-of eDP1
+# Set display resolution and position
+function setresboth() {
+    xrandr --output eDP1 --mode 1920x1080 --rate 60 --noprimary
+    xrandr --output DP1 --mode 2560x1440 --rate 60 --primary --left-of eDP1
+}
+
+function setresdell() {
+    xrandr --output eDP1 --mode 1920x1080 --rate 60 --primary
 }
 
 #--------------------------------------------------------------------------
