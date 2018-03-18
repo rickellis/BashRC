@@ -11,21 +11,21 @@ function rmdsstore() {
 # DirtyBird
 function dirtybird() {
     if [ -z "$1" ]; then
-        local path="$BASEDIR"
+        local path="$CODEDIR"
     else
         local path="$@"
     fi
-    $BASEDIR/Shell-Scripts/dirtybird.sh "$path"
+    $CODEDIR/Shell-Scripts/dirtybird.sh "$path"
 }
 
 # CleanBird
 function cleanbird() {
     if [ -z "$1" ]; then
-        local path="$BASEDIR"
+        local path="$CODEDIR"
     else
         local path="$@"
     fi
-    $BASEDIR/Shell-Scripts/cleanbird.sh "$path"
+    $CODEDIR/Shell-Scripts/cleanbird.sh "$path"
 }
 
 # -----------------------------------------------------------------------------

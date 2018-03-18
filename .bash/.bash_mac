@@ -27,6 +27,14 @@ export LS_COLORS=GxFxCxDxBxegedabagaced
 # FUNCTIONS
 #--------------------------------------------------------------------------
 
+# Reset the terminal
+function reload(){
+    reset
+    source ${HOME}/.bash_profile
+}
+
+# -----------------------------------------------------------------------------
+
 # Show/hide hidden files
 function togglehidden() {
     ISHIDDEN=$(defaults read com.apple.finder AppleShowAllFiles)

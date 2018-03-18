@@ -12,9 +12,6 @@ neofetch
 # We suppress error messages so the terminal doesn't get polluted.
 alias open="xdg-open >/dev/null 2>&1"
 
-# Update /etc/lsb-release
-alias lsb='sudo nano /etc/lsb-release'
-
 #add new fonts
 alias fcs='sudo fc-cache -fv'
 alias fcl='sudo fc-cache -fv ~/.fonts'
@@ -34,6 +31,14 @@ alias pacsyu='pacman -Syu; reconky'
 
 # Update the mirrorlist
 alias mirrors="sudo reflector --verbose --country 'United States' -l 20 -n 5 --sort rate --save /etc/pacman.d/mirrorlist"
+
+# -----------------------------------------------------------------------------
+
+# Reset the terminal
+function reload(){
+    reset
+    source ${HOME}/.bashrc
+}
 
 #--------------------------------------------------------------------------
 
@@ -69,42 +74,49 @@ function lc() {
 
 # Backup dotfiles
 function syncdotfiles() {
-    $BASEDIR/Utilities/sync-dotfiles.sh
+    $CODEDIR/Utilities/sync-dotfiles.sh
 }
 
 #--------------------------------------------------------------------------
 
 # Sync bashrc files to git
 function syncbashfiles() {
-    $BASEDIR/Utilities/sync-bashfiles.sh
+    $CODEDIR/Utilities/sync-bashfiles.sh
+}
+
+#--------------------------------------------------------------------------
+
+# Sync personal files to git
+function syncextras() {
+    $CODEDIR/Utilities/sync-extras.sh
 }
 
 #--------------------------------------------------------------------------
 
 # Wifi/VPN connection utility
 function wifivpn() {
-    $BASEDIR/WifiVPN/wifivpn.sh
+    $CODEDIR/WifiVPN/wifivpn.sh
 }
 
 #--------------------------------------------------------------------------
 
 # AURIC AUR Helper
 function auric() {
-    $BASEDIR/AURIC/auric.sh $@
+    $CODEDIR/AURIC/auric.sh $@
 }
 
 #--------------------------------------------------------------------------
 
 # Pacman Cheatsheet
 function pcheat() {
-    $BASEDIR/Shell-Scripts/pcheat.sh $@
+    $CODEDIR/Shell-Scripts/pcheat.sh $@
 }
 
 #--------------------------------------------------------------------------
 
 # ConkyMatic automatic conky color generator
 function conkymatic() {
-    $BASEDIR/ConkyMatic/conkymatic.sh $@
+    $CODEDIR/ConkyMatic/conkymatic.sh $@
 }
 
 #--------------------------------------------------------------------------
@@ -119,7 +131,7 @@ function reconky() {
 
 # Session commands
 function session() {
-    $BASEDIR/Utilities/session.sh $@
+    $CODEDIR/Utilities/session.sh $@
 }
 
 #--------------------------------------------------------------------------
@@ -127,7 +139,7 @@ function session() {
 # Enpass doesn't play nice with dark themes, so this tricks it into
 # using a light theme. This must be run after a theme change.
 function enpasstheme() {
-    $BASEDIR/Utilities/update-enpass-theme.sh
+    $CODEDIR/Utilities/update-enpass-theme.sh
 }
 
 #--------------------------------------------------------------------------
@@ -136,10 +148,12 @@ function enpasstheme() {
 function setresboth() {
     xrandr --output eDP1 --mode 1920x1080 --rate 60 --noprimary
     xrandr --output DP1 --mode 2560x1440 --rate 60 --primary --left-of eDP1
+    reconky
 }
 
 function setresdell() {
     xrandr --output eDP1 --mode 1920x1080 --rate 60 --primary
+    reconky
 }
 
 #--------------------------------------------------------------------------

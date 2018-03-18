@@ -8,14 +8,17 @@
 [[ $- != *i* ]] && return
 
 # Location of base directory
-BASEDIR="$HOME/CodeLab"
+BASEDIR="${HOME}/.bash"
+
+# Location of my scripts
+CODEDIR="${HOME}/CodeLab"
 
 # Define file includes
 BASHINCS=(".bash_aliases" ".bash_exports" ".bash_functions" ".bash_linux" ".bash_options" ".bash_mac")
 
 # Load the file includes if they exist
 for file in ${BASHINCS[@]}; do
-	[ -f $BASEDIR/BashRC/$file ] && source $BASEDIR/BashRC/$file;
+	[ -f $BASEDIR/$file ] && source $BASEDIR/$file;
 done
 unset file
 
