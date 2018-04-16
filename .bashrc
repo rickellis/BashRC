@@ -7,11 +7,9 @@
 # If not running interactively exit
 [[ $- != *i* ]] && return
 
-# Location of base directory
-BASEDIR="${HOME}/.bash"
+# Location of my Bash files
+BASEDIR="${HOME}/CodeLab/BashRC"
 
-# Location of my scripts
-CODEDIR="${HOME}/CodeLab"
 
 # Define file includes
 BASHINCS=(".bash_aliases" ".bash_exports" ".bash_functions" ".bash_linux" ".bash_options" ".bash_mac")

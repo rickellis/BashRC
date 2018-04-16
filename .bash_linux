@@ -74,49 +74,49 @@ function lc() {
 
 # Backup dotfiles
 function syncdotfiles() {
-    $CODEDIR/Utilities/sync-dotfiles.sh
+    ${HOME}/CodeLab/Utilities/sync-dotfiles.sh
 }
 
 #--------------------------------------------------------------------------
 
 # Sync bashrc files to git
 function syncbashfiles() {
-    $CODEDIR/Utilities/sync-bashfiles.sh
+    ${HOME}/CodeLab/Utilities/sync-bashfiles.sh
 }
 
 #--------------------------------------------------------------------------
 
 # Sync personal files to git
 function syncextras() {
-    $CODEDIR/Utilities/sync-extras.sh
+    ${HOME}/CodeLab/Utilities/sync-extras.sh
 }
 
 #--------------------------------------------------------------------------
 
 # Wifi/VPN connection utility
 function wifivpn() {
-    $CODEDIR/WifiVPN/wifivpn.sh
+    ${HOME}/CodeLab/WifiVPN/wifivpn.sh
 }
 
 #--------------------------------------------------------------------------
 
 # AURIC AUR Helper
 function auric() {
-    $CODEDIR/AURIC/auric.sh $@
+    ${HOME}/CodeLab/AURIC/auric.sh $@
 }
 
 #--------------------------------------------------------------------------
 
 # Pacman Cheatsheet
 function pcheat() {
-    $CODEDIR/Shell-Scripts/pcheat.sh $@
+    ${HOME}/CodeLab/Shell-Scripts/pcheat.sh $@
 }
 
 #--------------------------------------------------------------------------
 
 # ConkyMatic automatic conky color generator
 function conkymatic() {
-    $CODEDIR/ConkyMatic/conkymatic.sh $@
+    ${HOME}/CodeLab/ConkyMatic/conkymatic.sh $@
 }
 
 #--------------------------------------------------------------------------
@@ -131,7 +131,7 @@ function reconky() {
 
 # Session commands
 function session() {
-    $CODEDIR/Utilities/session.sh $@
+    ${HOME}/CodeLab/Utilities/session.sh $@
 }
 
 #--------------------------------------------------------------------------
@@ -139,7 +139,7 @@ function session() {
 # Enpass doesn't play nice with dark themes, so this tricks it into
 # using a light theme. This must be run after a theme change.
 function enpasstheme() {
-    $CODEDIR/Utilities/update-enpass-theme.sh
+    ${HOME}/CodeLab/Utilities/update-enpass-theme.sh
 }
 
 #--------------------------------------------------------------------------
