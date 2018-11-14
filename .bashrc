@@ -8,7 +8,7 @@
 [[ $- != *i* ]] && return
 
 # Location of my Bash files
-BASEDIR="${HOME}/CodeLab/BashRC"
+BASEDIR="${HOME}/Archive/CodeLab/BashRC"
 
 
 # Define file includes

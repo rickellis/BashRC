@@ -6,7 +6,7 @@ alias dt="cd ~/Desktop; ls"
 alias ds="cd ~/Documents; ls"
 alias dn="cd ~/Downloads; ls"
 alias db="cd ~/Dropbox; ls"
-alias lab="cd ~/CodeLab; ls"
+alias lab="cd ~/Archive/CodeLab; ls"
 
 # Quickies
 alias c='clear'

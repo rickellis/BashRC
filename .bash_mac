@@ -46,6 +46,13 @@ function togglehidden() {
     killall Finder
 }
 
+# -----------------------------------------------------------------------------
+
+# Creates an invisible doc spacer
+function dockspacer() {
+    defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
+}
+
 #--------------------------------------------------------------------------
 
 # Change directories and list contents
